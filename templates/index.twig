@@ -1,0 +1,53 @@
+{% extends '_layout' %}
+{% block main %}
+    <section id="about">
+        <article>
+            {# {% set introduction = craft.entries.section('introduction').first() %}
+            <h1>{{ introduction.title }}<br><span>{{ introduction.subtitleIntro }}</span></h1>
+            <p>
+                {{ introduction.description }}
+            </p> #}
+        </article>
+    </section>
+    {# <section class="blog" id="blog">
+        <h1>News</h1>
+        <main>
+        {% for entry in craft.entries.section('news').limit(3).all() %}
+            <div class="card">
+                <h3>{{ entry.title }}</h3>
+                {{ entry.newsBody }}
+                <button>READ MORE</button>
+            </div>
+        {% endfor %}
+        </main>
+    </section> #}
+    <section class="blog" id="games">
+        <h1>Our Games</h1>
+        <main>
+            {% for entry in craft.entries.section('games').all() %}
+                <a href="/games/{{ entry.slug }}">
+                    <div class="card">
+                        {% set headerImage = entry.gameLogoScreenshot.first() %}
+                        {% if headerImage %}
+                            <div class="boxshot">
+                                <img src="../web/uploads/images/games/{{ headerImage.filename }}">
+                                <h3>{{ entry.title }}</h3>
+                            </div>
+                        {% endif %}
+                    </div>
+                </a>
+            {% endfor %}
+        </main>
+    </section>
+    <section class="social" id="social">
+        <main>
+            <h1>Follow Fireroot Studios</h1>
+            <ul>
+                <li><a target="_blank" href="https://twitter.com/FirerootStudios"></a></li>
+                <li><a target="_blank" href="https://www.facebook.com/FirerootStudios/"></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/firerootstudios/"></a></li>
+                <li><a target="_blank" href="https://www.youtube.com/channel/UCfRy5jzOlRIor3Tezdq71Bw"></a></li>
+            </ul>
+        </main>
+    </section>
+{% endblock %}

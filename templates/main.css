@@ -1,0 +1,445 @@
+*{
+    margin:0;
+    padding:0;
+    border:0;
+}
+a{text-decoration: none}
+::selection {
+    background: #289e9c6b; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+    background: #289e9c6b; /* Gecko Browsers */
+}
+/* ========= nav ========= */
+nav{
+    width: 100%;
+    position: fixed;
+    font: bold 20px 'D-DIN';
+    color: white;
+    background: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+nav ul{
+    max-width: 1280px;
+    margin: 0 auto;
+    list-style: none;
+}
+nav:first-of-type ul li:first-child{
+    background: transparent url("FireRoot-logo-final.png") no-repeat center / cover;
+    height: 50px;
+    width: 25px;
+    margin: 10px 1em 10px 0;
+}
+nav ul li{
+    display: inline-block;
+    margin: 10px 1em;
+    vertical-align: middle;
+}
+nav ul li a{
+    color: inherit;
+}
+nav ul li a:hover{
+    color: #8f98a3;
+}
+nav ul li a:after{
+    content: '';
+    background: white;
+    height: 2px;
+    width: 0px;
+    display: block;
+    -webkit-transition: width .5s cubic-bezier(0,0,.2,1);
+    -moz-transition: width .5s cubic-bezier(0,0,.2,1);
+    -ms-transition: width .5s cubic-bezier(0,0,.2,1);
+    -o-transition: width .5s cubic-bezier(0,0,.2,1);
+    transition: width .5s cubic-bezier(0,0,.2,1);
+    pointer-events: none;
+}
+nav ul li a:hover:after{
+    width: 100%;
+}
+
+nav.responsive{
+    display: none;
+}
+nav.responsive input{
+    all: unset;
+}
+nav.responsive input span{
+    display: inline-block;
+}
+nav.responsive span:first-of-type{
+    background: transparent url("FireRoot-logo-final.png") no-repeat center / cover;
+    height: 50px;
+    width: 25px;
+    margin: 0 15px;
+    float: left;
+}
+nav.responsive label{
+    all: unset;
+    float: right;
+    height: 20px;
+    width: 20px;
+    margin: 15px;
+    background: transparent url("bars.svg") no-repeat center / cover;
+}
+nav.responsive input[type=checkbox]:checked ~ ul{
+    height: auto;
+}
+nav.responsive ul{
+    height: 0;
+    overflow: hidden;
+    text-align: center;
+
+    -webkit-transition: height .5s cubic-bezier(0,0,.2,1);
+    -moz-transition: height .5s cubic-bezier(0,0,.2,1);
+    -ms-transition: height .5s cubic-bezier(0,0,.2,1);
+    -o-transition: height .5s cubic-bezier(0,0,.2,1);
+    transition: height .5s cubic-bezier(0,0,.2,1);
+}
+nav.responsive ul li{
+    display: block;
+    clear: both;
+}
+/* ========= Header ========= */
+header{
+    height: 100vh;
+    width: 100%;
+    background: #289e9c6b;
+}
+header main{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+header main video{
+    /* Make video to at least 100% wide and tall */
+    min-width: 100%;
+    min-height: 100%;
+
+    /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+    width: auto;
+    height: auto;
+
+    /* Center the video */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+header main img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    width: 30%;
+}
+/* ========= sections ========= */
+section{
+    width: 100%;
+    height: 80vh;
+    display: grid;
+}
+section article{
+    margin: auto;
+    max-width: 1280px;
+}
+section article h1{
+    font: 600 3em 'Calibre';
+    margin: 0 1em;
+}
+section article h2{
+    font: 600 2.5em 'Calibre';
+    margin: 0 1em;
+}
+section article p{
+    margin: 0 2.4em;
+    column-count: 2;
+    font: normal 20px 'Calibre';
+    color: #707070;
+}
+
+/* ========= news ========= */
+section.blog{
+    background: dimgray url("spoopyamsterdam.jpg") no-repeat center / cover;
+}
+section.blog main{
+    margin: auto;
+    /*max-width: 1280px;*/
+    max-width: 900px;
+    display: flex;
+}
+section.blog main div.card{
+    margin: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    background: white;
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+}
+section.blog main div.card span{
+    background: dodgerblue url("LogoBlue.png") no-repeat center / cover;
+}
+section.blog main div.news-image{
+    margin-bottom: 3em;
+}
+section.blog main div.card h3{
+    font: 600 2em 'Calibre';
+}
+section.blog main div.card h4{
+    font: 600 1.5em 'Calibre';
+}
+section.blog main div.card p{display: none}
+section.blog main div.card p:first-of-type{
+    display: inline-block;
+    font: normal 1em 'Calibre';
+    overflow: hidden;
+    position: relative;
+    line-height: 1.2em;
+    max-height: 9.5em;
+    text-align: justify;
+    padding-right: 8px;
+    margin: 20px 0;
+}
+/* (...) at the end of the text*/
+section.blog main div.card p:before{
+    content: '...';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+section.blog main div.card p:after{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: white;
+}
+section.blog main div.card button{
+    background: -moz-linear-gradient(45deg, #20605e 0%, #289e9c 100%);
+    background: -webkit-linear-gradient(45deg, #20605e 0%,#289e9c 100%);
+    background: linear-gradient(45deg, #20605e 0%,#289e9c 100%);
+    padding: 14px 20px 7px 20px;
+    border-radius: 10px;
+    font: 600 1em 'Calibre';
+    color: white;
+    -webkit-transition: all 1s cubic-bezier(0,0,.2,1);
+    -moz-transition: all 1s cubic-bezier(0,0,.2,1);
+    -ms-transition: all 1s cubic-bezier(0,0,.2,1);
+    -o-transition: all 1s cubic-bezier(0,0,.2,1);
+    transition: all 1s cubic-bezier(0,0,.2,1);
+}
+section.blog main div.card button:hover{
+    background: -moz-linear-gradient(140deg, #20605e 0%, #289e9c 100%);
+    background: -webkit-linear-gradient(145deg, #20605e 0%,#289e9c 100%);
+    background: linear-gradient(145deg, #20605e 0%,#289e9c 100%);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+}
+/* ========= social ========= */
+section.social{
+    height: 45vh;
+}
+section.social main{
+    margin: auto;
+    text-align: center;
+    max-width: 1280px;
+}
+section.social main h1{
+    font: 600 3em 'Calibre';
+    margin: 1em 0 1em 0;
+}
+section.social main ul li{
+    display: inline-block;
+}
+section.social main ul li a{
+    width: 260px;
+    height: 240px;
+    display: inline-block;
+    -webkit-transition: all 1s cubic-bezier(0,0,.2,1);
+    -moz-transition: all 1s cubic-bezier(0,0,.2,1);
+    -ms-transition: all 1s cubic-bezier(0,0,.2,1);
+    -o-transition: all 1s cubic-bezier(0,0,.2,1);
+    transition: all 1s cubic-bezier(0,0,.2,1);
+}
+section.social main ul li a:hover{
+    -webkit-transform: scale(1.08);
+    -moz-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    -o-transform: scale(1.08);
+    transform: scale(1.08);
+    filter: brightness(140%);
+}
+section.social main ul li:nth-child(1) a{
+    background: transparent url("twitter.png") no-repeat center / cover;
+}
+section.social main ul li:nth-child(2) a{
+    background: transparent url("facebook-f.png") no-repeat center / cover;
+}
+section.social main ul li:nth-child(3) a{
+    background: transparent url("instagram.png") no-repeat center / cover;
+}
+section.social main ul li:nth-child(4) a{
+    background: transparent url("youtube.png") no-repeat center / cover;
+}
+/* ========= footer ========= */
+footer{
+    width: 100%;
+    height: 400px;
+    display: grid;
+    background: darkgray url("titandoolhof.jpg") no-repeat top / cover;
+}
+footer main{
+    margin: 135px auto auto auto;
+    text-align: center;
+    max-width: 1280px;
+}
+footer main h1{
+    font: 600 2.3em 'Calibre';
+    margin: 0 0 2.1em 0;
+}
+footer main form{
+    width: 100%;
+    text-align: center;
+}
+footer main form div{
+    text-align: left;
+    display: inline-block;
+}
+footer main form div label{
+    display: block;
+    font: 500 1em 'Calibre';
+    margin: 0 0 0 1.5em;
+}
+footer main form div input{
+    display: block;
+    font: normal 1em 'Calibre';
+    border-radius: 4px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+    padding: 12px 16px 5px 16px;
+    margin: 0 1em;
+    background: #F2F2F2;
+    border: 1px solid transparent;
+}
+footer main form div input:hover{
+    border: 1px solid #289e9c;
+}
+footer main form div input:focus{
+    box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+    outline: none;
+}
+footer main form button{
+    background: -moz-linear-gradient(45deg, #20605e 0%, #289e9c 100%);
+    background: -webkit-linear-gradient(45deg, #20605e 0%,#289e9c 100%);
+    background: linear-gradient(45deg, #20605e 0%,#289e9c 100%);
+    padding: 14px 20px 7px 20px;
+    border-radius: 10px;
+    font: 600 1em 'Calibre';
+    color: white;
+    -webkit-transition: all 1s cubic-bezier(0,0,.2,1);
+    -moz-transition: all 1s cubic-bezier(0,0,.2,1);
+    -ms-transition: all 1s cubic-bezier(0,0,.2,1);
+    -o-transition: all 1s cubic-bezier(0,0,.2,1);
+    transition: all 1s cubic-bezier(0,0,.2,1);
+}
+footer main form button:hover{
+    background: -moz-linear-gradient(140deg, #20605e 0%, #289e9c 100%);
+    background: -webkit-linear-gradient(145deg, #20605e 0%,#289e9c 100%);
+    background: linear-gradient(145deg, #20605e 0%,#289e9c 100%);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+}
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+    section article p{
+        column-count: 1;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (max-width: 960px) {
+    nav{
+        display: none;
+    }
+    nav.responsive{
+        display: block;
+    }
+
+    header main{
+        height: 100vh;
+    }
+    section article h1{
+        margin: 0 1.6em;
+        font-size: 188%;
+    }
+    section article p{
+        margin: 0 2.4em;
+    }
+
+    section{
+        height: auto;
+        padding: 2em 0;
+    }
+
+    section.blog main {
+        flex-direction: column;
+    }
+    section.social {
+        height: auto;
+    }
+    section.social main ul li a {
+        width: 38vw;
+        height: 22vh;
+    }
+
+    footer{
+        /*height: auto;*/
+    }
+    footer main form{
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 2em 0;
+    }
+    footer main form input{
+        flex: 1;
+    }
+    footer main form div {
+        text-align: center;
+        margin: 1em 0;
+    }
+    footer main form div input {
+        margin: 0 auto;
+    }
+    section article p{
+        column-count: 1;
+    }
+
+    footer main form button {
+        margin: 0 26%;
+    }
+    footer main form div label {
+        margin: 0;
+        text-shadow: 0px 0px 10px white;
+    }
+}
+
+/* ALS ALLES WERKT EN AF IS DAN KAN JE DIT VERWIJDERE */
+section.blog main div.card button{
+    display: none !important;
+}
+footer main{
+    display: none !important;
+}

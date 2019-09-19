@@ -1,0 +1,85 @@
+{% extends '_layout' %}
+{% block main %}
+    <section class="games" id="games">
+        {# <h1>{{ entry.title }}</h1> #}
+        <main>
+            <div class="card">
+                <div class="summary">
+                    {% set headerImage = entry.gameLogoScreenshot.first() %}
+                    <div class="boxshot">
+                        {% if headerImage %}
+                            <img src="../web/uploads/images/games/{{ headerImage.filename }}">
+                        {% endif %}
+                    </div>
+                    <div class="basic-information">
+                        <!-- Basic information -->
+                        <h3>{{ entry.title }}</h3>
+                        <p>Genre: {{ entry.gameGenre }} <br />
+                        Price: {{ entry.gamePrice }}</p>
+
+                        <p>{{ entry.gameSummary }}</p>
+
+                        <div class="basic-steam">
+                            <p><b>GET IT ON</b></p><br />
+                            <a href="{{ entry.gameSteamUrl }}"><img src="../storage/runtime/assets/steam-logo.png"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-screenshots">
+                    {% for screenshot in entry.gameScreenshots %}
+                        <div class="game-screenshot">
+                            <a href="../web/uploads/images/games/{{ screenshot.filename }}" target="_blank">
+                                <img src="../web/uploads/images/games/{{ screenshot.filename }}">
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div class="about">
+                    <h3>About the game</h3>
+                </div>
+
+                <!-- Section One to describe the game -->
+                <div class="information-section">
+                    <div class="information-text">
+                        <p>{{ entry.gameSectionOneText }}</p>
+                    </div>
+                    <div class="information-image">
+                        {% set imageSectionOne = entry.gameSectionOneImage.first() %}
+                        {% if imageSectionOne %}
+                            <a href="../web/uploads/images/games/{{ imageSectionOne.filename }}" target="_blank"><img src="../web/uploads/images/games/{{ imageSectionOne.filename }}"></a>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- Section Two to describe the game -->
+                <div class="information-section">
+                    <div class="information-image-left">
+                        {% set imageSectionTwo = entry.gameSectionTwoImage.first() %}
+                        {% if imageSectionTwo %}
+                            <a href="../web/uploads/images/games/{{ imageSectionTwo.filename }}" target="_blank"><img src="../web/uploads/images/games/{{ imageSectionTwo.filename }}"></a>
+                        {% endif %}
+                    </div>
+                    <div class="information-text">
+                        <p>{{ entry.gameSectionTwoText }}</p>
+                    </div>
+                </div>
+
+                <div class="youtube-trailer">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ entry.gameTrailer }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <!-- Steam promotion -->
+                <div class="steam">
+                    <h3>Get it on</h3>
+                    <a href="{{ entry.gameSteamUrl }}"><img src="../storage/runtime/assets/steam-logo.png"></a>
+                </div>
+
+                <div class="back-button">
+                    <a href="/games/"><button>BACK TO ALL GAMES</button></a>
+                </div>
+            </div>
+        </main>
+    </section>
+{% endblock %}

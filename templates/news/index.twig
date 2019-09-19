@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../storage/runtime/assets/blog.css">
+    <link rel="stylesheet" type="text/css" href="../storage/runtime/assets/fonts.css">
+    <title>Fireroot Studios - Refreshing Game Experiences</title>
+    <meta name="description" content="Fireroot Studios is a group of aspiring game developers who act on our ambition to create video games.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header>
+    <h1>This is our story, read our blog to keep up with everything we do!</h1>
+</header>
+<section>
+{% block main %}
+    <div class="row">
+    {% for entry in craft.entries.section('news').all() %}
+            <div class="card">
+                {# <h3>{{ entry.title }}</h3> #}
+                    {{ entry.newsBody }}
+            </div>
+    {% endfor %}
+    </div>
+{% endblock %}
+</section>
+</body>
+</html>

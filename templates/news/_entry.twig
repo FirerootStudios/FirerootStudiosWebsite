@@ -1,0 +1,22 @@
+{% extends '_layout' %}
+{% block main %}
+    <section class="blog" id="blog">
+        <h1>News</h1>
+        <main>
+            <div class="card">
+                <div class="news-image">
+                    {% set image = entry.featuredImage.first() %}
+                    {% if image %}
+                        <img src="../web/uploads/images/news/{{ image.filename }}">
+                    {% endif %}
+                </div>
+
+                <h3>{{ entry.title }}</h3>
+                <h3>{{ entry.subtitle }}</h3>
+                {{ entry.newsBody }}
+
+                <button>GO BACK</button>
+            </div>
+        </main>
+    </section>
+{% endblock %}
