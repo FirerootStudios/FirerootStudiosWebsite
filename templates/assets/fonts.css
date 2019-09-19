@@ -1,18 +1,35 @@
 @font-face {
     font-family: 'D-DIN';
     font-weight: normal;
-    src: url('D-DIN.otf'); /* IE9 Compat Modes */
-    src: url('D-DIN.otf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('D-DIN.woff2') format('woff2'), /* Super Modern Browsers */
-    url('D-DIN.woff') format('woff'), /* Pretty Modern Browsers */
-    url('D-DIN.ttf')  format('truetype') /* Safari, Android, iOS */
+    src: url('Fonts/D-DIN/D-DIN.otf'); /* IE9 Compat Modes */
+    src: url('Fonts/D-DIN/D-DIN.otf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('Fonts/D-DIN/D-DIN.woff2') format('woff2'), /* Super Modern Browsers */
+    url('Fonts/D-DIN/D-DIN.woff') format('woff'), /* Pretty Modern Browsers */
+    url('Fonts/D-DIN/D-DIN.ttf')  format('truetype') /* Safari, Android, iOS */
 }
 @font-face {
     font-family: 'D-DIN';
     font-weight: bold;
-    src: url('D-DIN-Bold.otf'); /* IE9 Compat Modes */
-    src: url('D-DIN-Bold.otf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('D-DIN-Bold.woff2') format('woff2'), /* Super Modern Browsers */
-    url('D-DIN-Bold.woff') format('woff'), /* Pretty Modern Browsers */
-    url('D-DIN-Bold.ttf')  format('truetype') /* Safari, Android, iOS */
+    src: url('Fonts/D-DIN/D-DIN-Bold.otf'); /* IE9 Compat Modes */
+    src: url('Fonts/D-DIN/D-DIN-Bold.otf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('Fonts/D-DIN/D-DIN-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+    url('Fonts/D-DIN/D-DIN-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+    url('Fonts/D-DIN/D-DIN-Bold.ttf')  format('truetype') /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'Calibre';
+    font-weight: normal;
+    src: url('Fonts/Calibre/Calibre-Regular.ttf'); /* IE9 Compat Modes */
+    src: url('Fonts/Calibre/Calibre-Regular.ttf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('Fonts/Calibre/Calibre-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('Fonts/Calibre/Calibre-Regular.woff') format('woff') /* Pretty Modern Browsers */
+}
+@font-face {
+    font-family: 'Calibre';
+    font-weight: bold;
+    src: url('Fonts/Calibre/Calibre-Semibold.ttf'); /* IE9 Compat Modes */
+    src: url('Fonts/Calibre/Calibre-Semibold.ttf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('Fonts/Calibre/Calibre-Semibold.woff2') format('woff2'), /* Super Modern Browsers */
+    url('Fonts/Calibre/Calibre-Semibold.woff') format('woff') /* Pretty Modern Browsers */
 }
