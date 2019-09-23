@@ -1,17 +1,22 @@
-*{
+* {
     margin:0;
     padding:0;
     border:0;
 }
-a{text-decoration: none}
+a {
+    text-decoration: none
+}
+
 ::selection {
     background: #289e9c6b; /* WebKit/Blink Browsers */
 }
+
 ::-moz-selection {
     background: #289e9c6b; /* Gecko Browsers */
 }
-/* ========= nav ========= */
-nav{
+
+/* ========= NAV ========= */
+nav {
     width: 100%;
     position: fixed;
     font: 20px 'D-DIN';
@@ -19,33 +24,40 @@ nav{
     background: rgba(0,0,0,0.5);
     z-index: 2;
 }
-nav ul{
+
+nav ul {
     max-width: 1280px;
     margin: 0 auto;
     list-style: none;
 }
-nav:first-of-type ul li:first-child{
+
+nav:first-of-type ul li:first-child {
     background: transparent url("FireRoot-logo-final.png") no-repeat center / cover;
     height: 50px;
     width: 25px;
     margin: 10px 1em 10px 0;
 }
+
 nav:first-of-type ul li:not(:first-child) {
     float: right;
     line-height: 48px;
 }
-nav ul li{
+
+nav ul li {
     display: inline-block;
     margin: 10px 1em;
     vertical-align: middle;
 }
-nav ul li a{
+
+nav ul li a {
     color: inherit;
 }
-nav ul li a:hover{
+
+nav ul li a:hover {
     color: #8f98a3;
 }
-nav ul li a:after{
+
+nav ul li a:after {
     content: '';
     background: white;
     height: 2px;
@@ -58,27 +70,32 @@ nav ul li a:after{
     transition: width .5s cubic-bezier(0,0,.2,1);
     pointer-events: none;
 }
-nav ul li a:hover:after{
+
+nav ul li a:hover:after {
     width: 100%;
 }
 
-nav.responsive{
+nav.responsive {
     display: none;
 }
-nav.responsive input{
+
+nav.responsive input {
     all: unset;
 }
-nav.responsive input span{
+
+nav.responsive input span {
     display: inline-block;
 }
-nav.responsive span:first-of-type{
+
+nav.responsive span:first-of-type {
     background: transparent url("FireRoot-logo-final.png") no-repeat center / cover;
     height: 50px;
     width: 25px;
     margin: 0 15px;
     float: left;
 }
-nav.responsive label{
+
+nav.responsive label {
     all: unset;
     float: right;
     height: 20px;
@@ -86,10 +103,12 @@ nav.responsive label{
     margin: 15px;
     background: transparent url("bars.svg") no-repeat center / cover;
 }
-nav.responsive input[type=checkbox]:checked ~ ul{
+
+nav.responsive input[type=checkbox]:checked ~ ul {
     height: auto;
 }
-nav.responsive ul{
+
+nav.responsive ul {
     height: 0;
     overflow: hidden;
     text-align: center;
@@ -100,17 +119,20 @@ nav.responsive ul{
     -o-transition: height .5s cubic-bezier(0,0,.2,1);
     transition: height .5s cubic-bezier(0,0,.2,1);
 }
+
 nav.responsive ul li{
     display: block;
     clear: both;
 }
-/* ========= Header ========= */
-header{
+
+/* ========= HEADER ========= */
+header {
     height: 100vh;
     width: 100%;
     background: #289e9c6b;
 }
-header main{
+
+header main {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -118,7 +140,8 @@ header main{
     height: 100%;
     overflow: hidden;
 }
-header main video{
+
+header main video {
     /* Make video to at least 100% wide and tall */
     min-width: 100%;
     min-height: 100%;
@@ -133,7 +156,8 @@ header main video{
     left: 50%;
     transform: translate(-50%,-50%);
 }
-header main img{
+
+header main img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -141,36 +165,43 @@ header main img{
     z-index: 1;
     width: 30%;
 }
-/* ========= sections ========= */
-section{
+
+/* ========= SECTIONS ========= */
+section {
     width: 100%;
     height: 90vh;
     display: grid;
 }
+
 section span {
     text-align: center;
     width: 100%;
     height: 160px;
     background-color: #374043;
 }
-section article{
+
+section article {
     margin: auto;
     max-width: 1280px;
 }
-section article h1{
+
+section article h1 {
     font: 600 3em 'Calibre';
     margin: 0 1em;
 }
-section article h1 span{
+
+section article h1 span {
     font: 600 0.8em 'Calibre';
 }
-section article p{
+
+section article p {
     margin: 0 2.4em;
     column-count: 2;
     font: normal 20px 'Calibre';
     color: #707070;
 }
-/* ========= news ========= */
+
+/* ========= BLOG ========= */
 section.blog span {
     text-align: center;
     width: 100%;
@@ -182,18 +213,19 @@ section.blog span h1 {
     line-height: 3.5em;
 }
 
-section.blog h1{
+section.blog h1 {
     font: 600 3em 'Calibre';
     color: white;
     margin: auto;
     text-shadow: 0px 2px 20px black;
 }
-section.blog main{
+section.blog main {
     margin: 0 auto auto auto;
     max-width: 900px;
     display: flex;
 }
-section.blog main div.card{
+
+section.blog main div.card {
     margin: 20px;
     padding: 30px;
     border-radius: 10px;
@@ -203,17 +235,22 @@ section.blog main div.card{
     display: flex;
     justify-content: space-between;
 }
-section.blog main div.card span{
+
+section.blog main div.card span {
     background: dodgerblue url("LogoBlue.png") no-repeat center / cover;
 }
-section.blog main div.card h3{
+
+section.blog main div.card h3 {
     font: 600 2em 'Calibre';
 }
-section.blog main div.card h4{
+
+section.blog main div.card h4 {
     font: 600 1.5em 'Calibre';
 }
-section.blog main div.card p{display: none}
-section.blog main div.card p:first-of-type{
+
+section.blog main div.card p{ display: none }
+
+section.blog main div.card p:first-of-type {
     display: inline-block;
     font: normal 1em 'Calibre';
     overflow: hidden;
@@ -224,14 +261,16 @@ section.blog main div.card p:first-of-type{
     padding-right: 8px;
     margin: 20px 0;
 }
+
 /* (...) at the end of the text*/
-section.blog main div.card p:before{
+section.blog main div.card p:before {
     content: '...';
     position: absolute;
     right: 0;
     bottom: 0;
 }
-section.blog main div.card p:after{
+
+section.blog main div.card p:after {
     content: '';
     position: absolute;
     right: 0;
@@ -240,7 +279,8 @@ section.blog main div.card p:after{
     margin-top: 0.2em;
     background: white;
 }
-section.blog main div.card button{
+
+section.blog main div.card button {
     background: -moz-linear-gradient(45deg, #20605e 0%, #289e9c 100%);
     background: -webkit-linear-gradient(45deg, #20605e 0%,#289e9c 100%);
     background: linear-gradient(45deg, #20605e 0%,#289e9c 100%);
@@ -254,7 +294,8 @@ section.blog main div.card button{
     -o-transition: all 1s cubic-bezier(0,0,.2,1);
     transition: all 1s cubic-bezier(0,0,.2,1);
 }
-section.blog main div.card button:hover{
+
+section.blog main div.card button:hover {
     background: -moz-linear-gradient(140deg, #20605e 0%, #289e9c 100%);
     background: -webkit-linear-gradient(145deg, #20605e 0%,#289e9c 100%);
     background: linear-gradient(145deg, #20605e 0%,#289e9c 100%);
@@ -271,30 +312,34 @@ section.blog main div.boxshot {
     vertical-align: top;
     text-align: center;
 }
+
 section.blog main div.boxshot img{
     max-width: 300px;
 }
 
-/* ========= games ========== */
+/* ========= GAMES ========== */
 
-section.games{
+section.games {
     /* background: dimgray url("spoopyamsterdam.jpg") no-repeat center / cover; */
     background-color: white;
     height: auto;
 }
-section.games h1{
+
+section.games h1 {
     font: 600 3em 'Calibre';
     color: white;
     margin: 30px auto 0px auto;
     text-shadow: 0px 2px 20px black;
 }
-section.games main{
+
+section.games main {
     margin: 0 auto auto auto;
     width: 1100px;
     max-width: 1100px;
     /*display: flex;*/
 }
-section.games main div.card{
+
+section.games main div.card {
     margin: 20px;
     padding: 30px;
     border-radius: 10px;
@@ -304,16 +349,18 @@ section.games main div.card{
     display: flex;
     justify-content: space-between;
 }
+
 section.games main div.summary {
     display: block;
     margin-bottom: 4em;
 }
+
 section.games main div.boxshot {
     display: inline-block;
     width: 400px;
     vertical-align: top;
 }
-section.games main div.boxshot img{
+section.games main div.boxshot img {
     max-width: 300px;
 }
 section.games main div.basic-information {
@@ -322,79 +369,100 @@ section.games main div.basic-information {
     vertical-align: top;
     margin-left: 5em;
 }
+
 section.games main div.basic-steam {
     margin-top: 1em;
 }
+
 section.games main div.basic-steam img {
     width: 150px;
 }
+
 section.games main div.information-section {
     display: block;
     vertical-align: top;
     margin-bottom: 4em;
     margin-left: 3em;
 }
+
 section.games main div.information-text {
     width: 450px;
     display: inline-block;
 }
+
 section.games main div.information-text ul {
     font: 400 1em 'Calibre';
 }
+
 section.games main div.game-screenshots {
     display: block;
 }
+
 section.games main div.game-screenshot {
     display: inline-block;
     width: 330px;
 }
+
 section.games main div.game-screenshot img {
     width: 300px;
 }
+
 section.games main div.about {
     width: 500px;
     margin: 3em auto 2em;
     text-align: center;
 }
+
 section.games main div.information-image {
     width: 450px;
     display: inline-block;
 }
+
 section.games main div.information-image img {
     width: 350px;
     float: right;
 }
+
 section.games main div.information-image-left {
     width: 450px;
     display: inline-block;
 }
+
 section.games main div.information-image-left img {
     width: 350px;
 }
-section.games main div.steam{
+
+section.games main div.steam {
     margin-top: 3em;
     text-align: center;
 }
-section.games main div.steam img{
+
+section.games main div.steam img {
     max-width: 300px;
     margin-top: 1em;
 }
-section.games main div.youtube-trailer{
+
+section.games main div.youtube-trailer {
     text-align: center;
 }
-section.games main div.card span{
+
+section.games main div.card span {
     background: dodgerblue url("LogoBlue.png") no-repeat center / cover;
 }
-section.games main div.card h3{
+
+section.games main div.card h3 {
     font: 600 2em 'Calibre';
 }
-section.games main div.card h4{
+
+section.games main div.card h4 {
     font: 600 1.5em 'Calibre';
 }
-section.games main div.card p{
+
+section.games main div.card p {
     font: 400 1em 'Calibre';
 }
-section.games main div.card p:first-of-type{
+
+section.games main div.card p:first-of-type {
     display: inline-block;
     font: normal 1em 'Calibre';
     overflow: hidden;
@@ -405,13 +473,15 @@ section.games main div.card p:first-of-type{
     padding-right: 8px;
     margin: 20px 0;
 }
+
 /* (...) at the end of the text*/
-section.games main div.card p:before{
+section.games main div.card p:before {
     position: absolute;
     right: 0;
     bottom: 0;
 }
-section.games main div.card p:after{
+
+section.games main div.card p:after {
     position: absolute;
     right: 0;
     width: 1em;
@@ -419,12 +489,14 @@ section.games main div.card p:after{
     margin-top: 0.2em;
     background: white;
 }
+
 section.games div.back-button {
     margin: 5em auto 0;
     width: 400px;
     text-align: center;
 }
-section.games main div.card button{
+
+section.games main div.card button {
     background: -moz-linear-gradient(45deg, #20605e 0%, #289e9c 100%);
     background: -webkit-linear-gradient(45deg, #20605e 0%,#289e9c 100%);
     background: linear-gradient(45deg, #20605e 0%,#289e9c 100%);
@@ -438,7 +510,8 @@ section.games main div.card button{
     -o-transition: all 1s cubic-bezier(0,0,.2,1);
     transition: all 1s cubic-bezier(0,0,.2,1);
 }
-section.games main div.card button:hover{
+
+section.games main div.card button:hover {
     background: -moz-linear-gradient(140deg, #20605e 0%, #289e9c 100%);
     background: -webkit-linear-gradient(145deg, #20605e 0%,#289e9c 100%);
     background: linear-gradient(145deg, #20605e 0%,#289e9c 100%);
@@ -450,30 +523,30 @@ section.games main div.card button:hover{
     cursor: pointer;
 }
 
-section.games footer{
+section.games footer {
     width: 100%;
     height: 1080px;
     display: grid;
     background: darkgray url("titandoolhof.jpg") no-repeat top / cover;
 }
 
-/* ========= social ========= */
-section.social{
+/* ========= SOCIAL (wordt community) ========= */
+section.social {
     height: 45vh;
 }
-section.social main{
+section.social main {
     margin: auto;
     text-align: center;
     max-width: 1280px;
 }
-section.social main h1{
+section.social main h1 {
     font: 600 3em 'Calibre';
     margin: 1em 0 1em 0;
 }
-section.social main ul li{
+section.social main ul li {
     display: inline-block;
 }
-section.social main ul li a{
+section.social main ul li a {
     width: 260px;
     height: 240px;
     display: inline-block;
@@ -483,7 +556,7 @@ section.social main ul li a{
     -o-transition: all 1s cubic-bezier(0,0,.2,1);
     transition: all 1s cubic-bezier(0,0,.2,1);
 }
-section.social main ul li a:hover{
+section.social main ul li a:hover {
     -webkit-transform: scale(1.08);
     -moz-transform: scale(1.08);
     -ms-transform: scale(1.08);
@@ -491,25 +564,103 @@ section.social main ul li a:hover{
     transform: scale(1.08);
     filter: brightness(140%);
 }
-section.social main ul li:nth-child(1) a{
+section.social main ul li:nth-child(1) a {
     background: transparent url("twitter.png") no-repeat center / cover;
 }
-section.social main ul li:nth-child(2) a{
+section.social main ul li:nth-child(2) a {
     background: transparent url("facebook-f.png") no-repeat center / cover;
 }
-section.social main ul li:nth-child(3) a{
+section.social main ul li:nth-child(3) a {
     background: transparent url("instagram.png") no-repeat center / cover;
 }
-section.social main ul li:nth-child(4) a{
+section.social main ul li:nth-child(4) a {
     background: transparent url("youtube.png") no-repeat center / cover;
 }
 
-/* ========= community ========= */
-#community main{
-    background: transparent url("community.png") no-repeat center;
+/* ========= COMMUNITY ========= */
+#community {
+    background-color: #5C696E;
 }
 
-/* ========= contact ========= */
+#community main {
+    display: grid;
+    justify-items: center;
+    /* border: 2px dashed white; */
+    height: 500px;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-rows: auto;
+}
+
+section.community span {
+    text-align: center;
+    width: 100%;
+    height: 160px;
+    background-color: #374043;
+}
+
+section.community span h1 {
+    line-height: 3.5em;
+}
+
+section.community h1 {
+    font: 600 3em 'Calibre';
+    color: white;
+    margin: auto;
+    text-shadow: 0px 2px 20px black;
+}
+
+section.community h3 {
+    font: 2em 'D-DIN';
+    color: white;
+    margin: 10px 0px;
+}
+
+section.community h5 {
+    font: 1em 'D-DIN';
+    color: white;
+    margin: 10px 0px;
+}
+
+section.community .item {
+    max-width: 470px;
+    align-self: center;
+    justify-self: center;
+}
+
+section.community .item button {
+    height: 70px;
+    width: 170px;
+    background: #374043;
+    color: white;
+    font: 50 1em 'D-DIN Exp';
+    cursor: pointer;
+}
+
+section.community .item button:hover {
+    background: #474d4e;
+}
+
+section.community .item-2 {
+    text-align: center;
+}
+
+section.community .item-2 button {
+    max-width: 130px;
+    height: 130px;
+    background: white;
+    color: black;
+}  
+
+section.community .item-2 button:hover {
+    background: rgb(223, 222, 222);
+}  
+
+section.community .item-2 button:nth-child(odd) {
+    margin: 15px 15px 0 0;
+}
+
+
+/* ========= CONTACT ========= */
 .contact article h1 {
     width: 900px;
     text-align: center;
@@ -586,43 +737,43 @@ section.social main ul li:nth-child(4) a{
     font: 400 1.1em 'Calibre';
 }
 
-/* ========= footer ========= */
-footer{
+/* ========= FOOTER ========= */
+footer {
     width: 100%;
     height: 160px;
     display: grid;
     background: #374043;
 }
-footer main{
+footer main {
     text-align: center;
 }
 footer main img {
     width: 132px;
 }
 
-footer main p{
+footer main p {
     font: normal 1em 'Calibre';
     color: white;
 }
 
-footer main h1{
+footer main h1 {
     font: 600 2.3em 'Calibre';
     margin: 0 0 2.1em 0;
 }
-footer main form{
+footer main form {
     width: 100%;
     text-align: center;
 }
-footer main form div{
+footer main form div {
     text-align: left;
     display: inline-block;
 }
-footer main form div label{
+footer main form div label {
     display: block;
     font: 500 1em 'Calibre';
     margin: 0 0 0 1.5em;
 }
-footer main form div input{
+footer main form div input {
     display: block;
     font: normal 1em 'Calibre';
     border-radius: 4px;
@@ -632,14 +783,14 @@ footer main form div input{
     background: #F2F2F2;
     border: 1px solid transparent;
 }
-footer main form div input:hover{
+footer main form div input:hover {
     border: 1px solid #289e9c;
 }
-footer main form div input:focus{
+footer main form div input:focus {
     box-shadow: 0 5px 10px rgba(0,0,0,0.4);
     outline: none;
 }
-footer main form button{
+footer main form button {
     background: -moz-linear-gradient(45deg, #20605e 0%, #289e9c 100%);
     background: -webkit-linear-gradient(45deg, #20605e 0%,#289e9c 100%);
     background: linear-gradient(45deg, #20605e 0%,#289e9c 100%);
@@ -653,7 +804,7 @@ footer main form button{
     -o-transition: all 1s cubic-bezier(0,0,.2,1);
     transition: all 1s cubic-bezier(0,0,.2,1);
 }
-footer main form button:hover{
+footer main form button:hover {
     background: -moz-linear-gradient(140deg, #20605e 0%, #289e9c 100%);
     background: -webkit-linear-gradient(145deg, #20605e 0%,#289e9c 100%);
     background: linear-gradient(145deg, #20605e 0%,#289e9c 100%);
@@ -665,32 +816,32 @@ footer main form button:hover{
 }
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
-    section article p{
+    section article p {
         column-count: 1;
     }
 }
 
 /* Tablet Styles */
 @media only screen and (max-width: 960px) {
-    nav{
+    nav {
         display: none;
     }
-    nav.responsive{
+    nav.responsive {
         display: block;
     }
 
-    header main{
+    header main {
         height: 100vh;
     }
-    section article h1{
+    section article h1 {
         margin: 0 1.6em;
         font-size: 188%;
     }
-    section article p{
+    section article p {
         margin: 0 2.4em;
     }
 
-    section{
+    section {
         height: auto;
         padding: 2em 0;
     }
@@ -698,7 +849,7 @@ footer main form button:hover{
     section.blog main {
         flex-direction: column;
     }
-    section.social {
+    section.community {
         height: auto;
     }
     section.social main ul li a {
@@ -706,15 +857,15 @@ footer main form button:hover{
         height: 22vh;
     }
 
-    footer{
+    footer {
         /*height: auto;*/
     }
-    footer main form{
+    footer main form {
         display: flex;
         flex-direction: column;
         margin: 0 0 2em 0;
     }
-    footer main form input{
+    footer main form input {
         flex: 1;
     }
     footer main form div {
@@ -724,7 +875,7 @@ footer main form button:hover{
     footer main form div input {
         margin: 0 auto;
     }
-    section article p{
+    section article p {
         column-count: 1;
     }
 
@@ -736,10 +887,10 @@ footer main form button:hover{
         text-shadow: 0px 0px 10px white;
     }
 
-    nav ul li a:after{
+    nav ul li a:after {
         display: none;
     }
-    nav ul li a:hover:after{
+    nav ul li a:hover:after {
         display: none;
     }
 
@@ -767,12 +918,12 @@ footer main form button:hover{
 }
 
 /* ALS ALLES WERKT EN AF IS DAN KAN JE DIT VERWIJDERE */
-section.blog main div.card button{
+section.blog main div.card button {
     display: none !important;
 }
-nav ul li:nth-child(6){
+nav ul li:nth-child(6) {
     display: none;
 }
-nav.responsive ul li:nth-child(5){
+nav.responsive ul li:nth-child(5) {
     display: none;
 }
