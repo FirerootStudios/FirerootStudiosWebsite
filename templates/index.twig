@@ -66,12 +66,9 @@
                 <button>READ MORE</button>
             </div>
             <div class="item item-2">
-                <button>FB</button>
-                <button>Reddit</button>
-                <button>Twitter</button>
-                <button>Discord</button>
-                <button>YouTube</button>
-                <button>Instagram</button>
+                {% for entry in craft.entries.section('socials').all() %}
+                    <a href="{{entry.socialLink}}" target="_blank">{{ entry.socialIcon.iconSpan|raw }}</a>
+                {% endfor %}
             </div>
             <div class="item item-3">
                 <h3>Title</h3>
